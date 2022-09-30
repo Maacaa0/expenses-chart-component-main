@@ -44,23 +44,28 @@ const jsonData = [
    } else {
     days[i].previousElementSibling.classList.remove("display");
    }
-
-   }
+ }
   
   days.forEach(function(dayOfWeek){
     dayOfWeek.addEventListener("mouseenter", function() {
         dayOfWeek.previousElementSibling.classList.add("display")
     })
-  })
+  });
   
 
   days.forEach(function(dayOfWeek){
     dayOfWeek.addEventListener("mouseleave", function() {
       if (!dayOfWeek.classList.contains(today))
-        dayOfWeek.previousElementSibling.classList.remove("display")
-        
+        dayOfWeek.previousElementSibling.classList.remove("display")   
     })
-  })
+  });
+  
+// FOR TOUCH DEVICES
+days.forEach(function(dayOfWeek){
+    dayOfWeek.addEventListener("click", function() {
+        dayOfWeek.previousElementSibling.classList.toggle("display")
+     })
+  });
   
 
 
