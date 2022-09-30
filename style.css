@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
+
+:root {
+--Softred: hsl(10, 79%, 65%);
+--Cyan: hsl(186, 34%, 60%);
+--Darkbrown: hsl(25, 47%, 15%);
+--Mediumbrown: hsl(28, 10%, 53%);
+--Cream: hsl(27, 66%, 92%);
+--Verypaleorange: hsl(33, 100%, 98%);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    background: var(--Cream);
+    font-family: "DM Sans", sans-serif;
+    gap: 2rem;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.upper {
+    display: flex;
+    justify-content: space-between;
+    background: var(--Softred);
+    font-size: 1.3rem;
+    padding: 1.5rem 2rem;
+    border-radius: 1rem;
+}
+
+img {
+    width: 15%;
+}
+
+.column {
+    display: flex;
+    gap: .8rem;
+    flex-direction: column;
+    color: white;
+}
+
+.balance {
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.main-container {
+    background: white;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+
+
+.week {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1.1rem;
+}
+
+.day-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+
+.days {
+    height: 10%;
+    width:50px;
+    background-color: var(--Softred);
+    border-radius: .4rem;
+    
+}
+
+ .days:hover {
+    cursor: pointer;
+    background-color: hsl(10, 79%, 75%);
+} 
+
+.toggle-box {
+    transition: 200ms ease;
+    opacity: 0;
+    background-color: black;
+    color: white;
+    padding: .4rem;
+    border-radius: .4rem;
+    font-size: .7rem;
+}
+
+.display {
+    transition: 150ms ease;
+    opacity: 1;
+}
+
+.day-text {
+    text-align: center;
+    font-size: 1rem;
+    color: var(--Mediumbrown);
+}
+
+
+.line {
+    margin-top: .5rem;
+    margin-bottom: 2.1rem;
+    background-color: var(--Cream);
+    width: auto;
+    height: 1px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-text {
+    color: var(--Mediumbrown);
+    font-size: 1.1rem;
+    letter-spacing: .3px;
+    margin: 0;
+}
+
+strong {
+    font-size: 3rem;
+}
+
+.right-footer {
+    margin-top: 1.3rem;
+    align-self: center;
+}
+
+.percentage {
+    display: flex;
+    justify-content: flex-end;
+    font-weight: 700;
+}
+
+@media (max-width:550px ) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .week {
+        gap: 0
+    }
+
+    strong {
+        font-size: 2.5rem;
+    }
+
+    .main-container {
+        padding: 1rem
+    }
+
+    .days {
+        width: 35px;
+    }
+
+    
+}
