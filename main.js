@@ -39,8 +39,7 @@ const jsonData = [
    days[i].previousElementSibling.innerText = `$${jsonData[i]["amount"]}`,
    days[i].style.height = `${jsonData[i]["amount"]*3}px`;
    if (days[i].classList.contains(today)) {
-    days[i].style.background = "hsl(186, 34%, 60%)",
-    days[i].previousElementSibling.classList.add("display");
+    days[i].style.background = "hsl(186, 34%, 60%)"
    } else {
     days[i].previousElementSibling.classList.remove("display");
    }
@@ -55,7 +54,6 @@ const jsonData = [
 
   days.forEach(function(dayOfWeek){
     dayOfWeek.addEventListener("mouseleave", function() {
-      if (!dayOfWeek.classList.contains(today))
         dayOfWeek.previousElementSibling.classList.remove("display")   
     })
   });
